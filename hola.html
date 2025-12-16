@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Hola — Diseño Moderno</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --bg1: #0f172a; /* dark navy */
+                --bg2: #0b1220; /* deeper */
+                --accent1: #7c3aed; /* purple */
+                --accent2: #06b6d4; /* cyan */
+                --glass: rgba(255,255,255,0.06);
+            }
+
+            *{box-sizing:border-box}
+            html,body{height:100%}
+            body{
+                margin:0;
+                font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+                background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent 10%),
+                                        radial-gradient(1000px 500px at 90% 90%, rgba(6,182,212,0.08), transparent 10%),
+                                        linear-gradient(180deg,var(--bg1),var(--bg2));
+                color: #e6edf3;
+                -webkit-font-smoothing:antialiased;
+                -moz-osx-font-smoothing:grayscale;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                padding:2rem;
+            }
+
+            .card{
+                width:min(960px,96vw);
+                background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+                border-radius:18px;
+                padding:3.2rem 2.6rem;
+                box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+                backdrop-filter: blur(8px) saturate(120%);
+                display:flex;
+                gap:2rem;
+                align-items:center;
+                justify-content:space-between;
+            }
+
+            .greeting{
+                display:flex;
+                flex-direction:column;
+                gap:0.6rem;
+            }
+
+            .title{
+                font-size: clamp(2.6rem, 6vw, 5rem);
+                line-height:0.95;
+                font-weight:800;
+                letter-spacing: -0.02em;
+                margin:0;
+                background: linear-gradient(90deg,var(--accent1),var(--accent2));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                filter: drop-shadow(0 6px 18px rgba(12,14,27,0.6));
+                transform-origin:center left;
+                animation: float 5s ease-in-out infinite;
+            }
+
+            @keyframes float{
+                0%{transform:translateY(0)}
+                50%{transform:translateY(-6px)}
+                100%{transform:translateY(0)}
+            }
+
+            .subtitle{
+                margin:0;
+                color: #bcd7e6;
+                font-weight:400;
+                opacity:0.95;
+            }
+
+            .avatar{
+                width:96px;
+                height:96px;
+                border-radius:16px;
+                background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                box-shadow: 0 6px 18px rgba(2,6,23,0.55);
+                flex-shrink:0;
+            }
+
+            .avatar svg{width:56px;height:56px;opacity:0.95}
+
+            @media (max-width:720px){
+                .card{padding:2rem;flex-direction:column;align-items:flex-start}
+                .avatar{width:72px;height:72px}
+            }
+        </style>
+    </head>
+    <body>
+        <main class="card" role="main">
+            <div class="greeting">
+                <h1 class="title">hola</h1>
+                <p class="subtitle">Una página de ejemplo con estética moderna y tipografía cuidada.</p>
+            </div>
+
+            <div class="avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="1.5" y="1.5" width="21" height="21" rx="6" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+                    <path d="M12 7.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5z" fill="url(#g)"/>
+                    <path d="M5.5 17.25c0-2.76 3.8-5 6.5-5s6.5 2.24 6.5 5v.25H5.5v-.25z" fill="rgba(255,255,255,0.06)"/>
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1">
+                            <stop offset="0" stop-color="#7c3aed" stop-opacity="0.95"/>
+                            <stop offset="1" stop-color="#06b6d4" stop-opacity="0.95"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </main>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #333;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Hola 👋</h1>
+        <p>Bienvenido a mi página</p>
+    </div>
+</body>
+</html>
