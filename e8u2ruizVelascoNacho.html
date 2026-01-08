@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Taller Intensivo </title>
+</head>
+<body>
+    <style>
+
+        body{
+            background-color: #F0F0F5;
+        }
+
+        .Presentacion{
+            background-color: #FFFFFF;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .encabezado {
+            background-color:#3F51B5;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .Paso1{
+            background-color: #FFFFFF;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+        }
+        .Agenda{
+            background-color: #FFFFFF;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+
+    <div class="encabezado">
+        <button type="button" style="background-color: #3F51B5;font-family: 'Segoe UI'; color: aliceblue">REGISTRO</button>
+        <button type="button" style="background-color: #3F51B5;font-family: 'Segoe UI'; color: aliceblue">AGENDA</button>
+        <button type="button" style="background-color: #3F51B5;font-family: 'Segoe UI'; color: aliceblue">UBICACIÓN</button>
+    </div>
+    <br>
+    <div class="Presentacion">
+        <h1 style="color: #3F51B5;">Taller Intensivo de Marketing Digital </h1>
+        <img src="data:image/png;base64,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">
+        <p>¡Prepárate para la <b> transformación digital</b>! Es un evento <i> único. </i></p>
+        <p>"La mejor inversión es el conocimiento propio".</p>
+        <br>
+    </div>
+    <hr style="color: #3F51B5;">
+    <br>
+    <div class="Paso1">
+        <h1 style="font-size: 20px;">Paso 1: Completa tu Registro (Formulario Principal)</h1>
+       <fieldset>
+         <form>
+            <legend style="color: #3F51B5;">Datos Personales</legend>
+            <label>Nombre Completo:</label><br>
+            <input type="text" name="Nombre Completo"><br>
+            <br>
+            <label>Correo Electrónico:</label><br>
+            <input type="text" name="Correo Electrónico"><br>
+            <label>Rol Principal:</label><br>
+            <input type="radio" name="Estudiante">
+            <label for="Estudiante"> Estudiante </label>
+            <input type="radio" name="Profesional">
+            <label for="Profesional"> Profesional </label>
+        </form>
+       </fieldset>
+       <br>
+       <fieldset>
+         <form>
+            <legend style="color: #3F51B5;">Preferencias del Taller</legend>
+            <label>Áreas de Interés:</label><br>
+            <input type="checkbox" name="SEO (Optimización)">
+            <label for="SEO (Optimización)">SEO (Optimización)</label><br>
+            <input type="checkbox" name="Profesional">
+            <label for="Profesional"> Profesional </label><br>
+             <input type="checkbox" name="Publicidad Social">
+            <label for="Publicidad Social"> Publicidad Social </label><br>
+            <label>Horario Preferido:</label><br>
+            <input type=""><br>
+            <label> Comentarios y Preguntas: </label><br>
+            <input type="text" name="Comentarios y Preguntas">
+        </form>
+       </fieldset>
+       <br>
+       <button type="button" style="background-color: #4CAF50; color: white;">Registrarse Ahora &#128640;</button>
+       <button type="button" style="background-color: #FF9800; color: white;border: 1px solid black;">Borrar Datos</button>
+    </div>
+    <br>
+    <div class="Agenda">
+        <h1 style="font-size: 20px;">Agenda del Taller</h1>
+        <br>
+        <table style="width: 80%;">
+            <tr style="background-color: #F2F2F2;text-align: center;">
+                <th>Hora</th>
+                <th>Tema</th>
+                <th>Ponente</th>
+            </tr>
+            <tr>
+                <td>9:00</td>
+                <td>Estrategia de Contenido</td>
+                <td>Marta G.</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Analítica Avanzada</td>
+                <td>Juan R.</td>
+            </tr>
+        </table>
+        <h2 style="font-size: 17px;">Requisitos para el Taller</h2>
+        <ul style="list-style-type:circle;">
+            <li>Cuaderno y bolígrafo.</li>
+            <li>Traer su <b style="color: red;">Laptop</b> cargada.</li>
+            <li>Conexión estable.</li>
+        </ul>
+    </div>
+</body>
+</html>
