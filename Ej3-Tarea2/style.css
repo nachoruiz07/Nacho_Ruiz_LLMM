@@ -4,17 +4,60 @@ body{
     background-color: silver;
 }
 
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 .tarjeta-simple {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    
 }
 
 .tarjeta-degradado {
     background: linear-gradient(45deg, #2196F3, #9C27BC);
     color: white;
     border-radius: 15px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-left: 700px;
     margin-right: 700px;
     padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tarjeta-imagen {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: grey;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.circulo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    line-height: 150px; /* Buscado */
+    margin: 0 auto 20px auto; /* Buscado */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    margin-bottom: 25px;
 }
