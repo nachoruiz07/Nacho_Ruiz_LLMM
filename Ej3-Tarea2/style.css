@@ -1,0 +1,20 @@
+*{margin: 0; padding: 0%;}
+
+body{
+    background-color: silver;
+}
+
+.tarjeta-simple {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-degradado {
+    background: linear-gradient(45deg, #2196F3, #9C27BC);
+    color: white;
+    border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 30px;
+}

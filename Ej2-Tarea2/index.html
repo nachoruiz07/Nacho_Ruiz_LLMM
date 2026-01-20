@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: El Modelo de Caja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>El Modelo de Caja (Box Model)</h1>
+        <p>Entendiendo cómo funcionan width, padding, border y margin.</p>
+    </header>
+
+    <main>
+        <section class="explicacion">
+            <h2>Concepto Básico</h2>
+            <p>Todo elemento en HTML es una caja rectangular. El modelo de caja consiste en:</p>
+            <ul>
+                <li><strong>Content:</strong> El contenido real (texto, imagen).</li>
+                <li><strong>Padding:</strong> Espacio interior transparente alrededor del contenido.</li>
+                <li><strong>Border:</strong> Borde que rodea el padding y el contenido.</li>
+                <li><strong>Margin:</strong> Espacio exterior transparente fuera del borde (separa de otros elementos).
+                </li>
+            </ul>
+        </section>
+
+        <section class="ejemplo-cajas">
+            <h2>Comparación: content-box vs border-box</h2>
+
+            <div class="caja caja-content">
+                <h3>Caja 1: content-box</h3>
+                <p>Width: 300px<br>Padding: 20px<br>Border: 10px</p>
+                <p><strong>Ancho Total Real: 360px</strong><br>(300 + 20*2 + 10*2)</p>
+            </div>
+
+            <div class="caja caja-border">
+                <h3>Caja 2: border-box</h3>
+                <p>Width: 300px<br>Padding: 20px<br>Border: 10px</p>
+                <p><strong>Ancho Total Real: 300px</strong><br>(El ancho incluye padding y border)</p>
+            </div>
+
+            <div class="nota-margen">
+                <p>Esta caja tiene un margen grande para separarse de las de arriba.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
