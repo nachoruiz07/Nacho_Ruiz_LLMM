@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5: Posicionamiento CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tipos de Posicionamiento (Position)</h1>
+    </header>
+
+    <div class="caja-fija">
+        <p>Soy <strong>FIXED</strong>. Me quedo aquí aunque hagas scroll.</p>
+    </div>
+
+    <main>
+        <section class="contenedor-relativo">
+            <h2>Contenedor (Relative)</h2>
+            <p>Este cuadro tiene <code>position: relative</code>. Sirve de referencia para el cuadro absoluto de
+                adentro.</p>
+
+            <div class="caja-absoluta">
+                <p>Soy <strong>ABSOLUTE</strong>. Me ubico respecto al contenedor relativo.</p>
+            </div>
+        </section>
+
+        <section class="scroll-demo">
+            <h2>Ejemplo de Sticky</h2>
+            <p>Haz scroll hacia abajo para ver el efecto.</p>
+
+            <div class="caja-sticky">
+                <p>Soy <strong>STICKY</strong>. Me pego al techo al llegar a top: 0.</p>
+            </div>
+
+            <p style="margin-bottom: 50px;">Texto de relleno...</p>
+            <p style="margin-bottom: 50px;">Más texto...</p>
+            <p style="margin-bottom: 50px;">Sigue bajando...</p>
+            <p style="margin-bottom: 50px;">Casi llegas...</p>
+            <p style="margin-bottom: 50px;">Fin del ejemplo.</p>
+        </section>
+    </main>
+</body>
+
+</html>

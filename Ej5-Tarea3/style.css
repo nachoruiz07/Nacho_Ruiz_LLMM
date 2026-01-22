@@ -1,0 +1,57 @@
+
+body{
+    background-color: pink;
+}
+header{
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    padding: 30px;
+   margin-bottom: 40px;
+}
+h1{
+    text-align: center;
+    background-color: palevioletred;
+    color: white;
+
+}
+
+
+.caja-fija {
+position: fixed;
+bottom: 20px;
+right: 20px;
+}
+
+.caja-sticky {
+    position: sticky;
+    top: 0;
+}
+
+.contenedor-relativo { 
+    position: relative; 
+    background-color: white;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-bottom: 250px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    border: palevioletred 2px solid;
+    border-style: dashed;
+}
+
+.caja-absoluta {
+position: absolute;
+top: 20px;
+right: 20px;
+text-align: center;
+background-color: palevioletred;
+color: white;
+padding: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+}
+
