@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14: Tipografía y Espaciado</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 p-10 font-sans">
+
+    <div class="mb-10 bg-white p-6 rounded shadow max-w-2xl mx-auto">
+        <h2 class="text-xl font-bold bg-blue-100 p-2 rounded">Instrucciones</h2>
+        <ul class="list-disc pl-5 mt-4 space-y-2 text-sm text-gray-700">
+            <li>Replica el diseño de una "Cita" o "Testimonio".</li>
+            <li>Usa <code>text-center</code>, <code>font-style</code> (italic), y <code>text-gray-500</code> para el
+                texto de la cita.</li>
+            <li>Usa <code>my-*</code> o <code>py-*</code> para dar espaciado vertical.</li>
+            <li>Usa <code>tracking-wide</code> o <code>leading-relaxed</code> para ajustar el texto.</li>
+            <li>El autor debe ir en negrita y en mayúsculas (<code>uppercase</code>).</li>
+        </ul>
+    </div>
+
+    <!-- ZONA DE TRABAJO -->
+    <div class="max-w-xl mx-auto bg-white shadow-lg p-8 rounded-xl">
+
+        <!-- Cita -->
+        <p class="text-center italic text-gray-500 text-xl leading-relaxed py-6 px-4">
+            "El diseño no es solo lo que se ve y se siente. El diseño es cómo funciona."
+        </p>
+
+        <!-- Autor -->
+        <div class="text-center my-6">
+            - Steve Jobs
+        </div>
+
+        <hr class="my-8 border-gray-300">
+
+        <h3 class="mt-4 text-2xl font-bold text-gray-800 mb-4">Otro Texto de ejemplo</h3>
+        <p class="text-gray-600 leading-relaxed mb-4 p-4 bg-gray-50 rounded-lg">Usa clases de margin (m-?), padding (p-?) y tamaño de fuente (text-?) para que este bloque se vea bien
+            separado del anterior.</p>
+
+    </div>
+
+</body>
+
+</html>
