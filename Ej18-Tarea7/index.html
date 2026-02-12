@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18: Estados y Modo Oscuro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="antialiased transition-colors duration-300">
+    <!-- Nota: Para probar el modo oscuro, añade manualmente la clase 'dark' a la etiqueta <html> o usa el botón de abajo -->
+
+    <div
+        class="min-h-screen flex flex-col items-center justify-center dark:bg-slate-900 bg-gray-50 transition-colors duration-300">
+
+        <button onclick="document.documentElement.classList.toggle('dark')"
+            class="absolute top-5 right-5 px-4 py-2 bg-gray-200 dark:bg-gray-700 dark:text-white rounded shadow text-sm font-semibold dark:bg-slate-900 dark:text-white">
+            Alternar Modo Oscuro
+        </button>
+<!-- no logro arreglar el modo oscuro-->
+        <!-- TARJETA INTERACTIVA -->
+        <!-- 
+            RETO:
+            1. Hover: Haz que al pasar el mouse (hover:), la escala aumente (scale-105) y la sombra crezca (shadow-xl).
+            2. Modo Oscuro:
+               - Fondo de tarjeta: blanco en luz (bg-white), gris oscuro en night (dark:bg-slate-800).
+               - Texto título: negro en luz, blanco en night (dark:text-white).
+               - Texto párrafo: gris en luz, gris claro en night (dark:text-slate-400).
+            3. Input Focus:
+               - Al hacer foco en el input (focus:), cambia borde a azul (focus:border-blue-500) y quita el outline (outline-none).
+        -->
+        <div
+            class="w-full max-w-sm p-6 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
+            <!-- Añade clases aquí -->
+
+            <h2 class="text-2xl font-bold mb-4 hover:scale-105 hover:shadow-2xl">Inicia Sesión</h2>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input type="email"
+                        class="w-full px-4 py-2 border rounded-lg dark:bg-slate-900 dark:text-white dark:border-gray-600 focus:ring-2 focus:border-blue-500"
+                        placeholder="tu@email.com"> <!-- Añade focus ring aquí -->
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Contraseña</label>
+                    <input type="password"
+                        class="w-full px-4 py-2 border rounded-lg dark:bg-slate-900 dark:text-white dark:border-gray-600 focus:ring-2 focus:border-blue-500"
+                        placeholder="••••••••">
+                </div>
+
+                <button type="button"
+                    class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-colors">
+                    Entrar
+                </button>
+            </form>
+
+            <p class="text-xs text-center mt-6 text-gray-500">
+                ¿No tienes cuenta? <a href="#"
+                    class="text-blue-500 hover:text-blue-400 font-medium underline">Regístrate</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

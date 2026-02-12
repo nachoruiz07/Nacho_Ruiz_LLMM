@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20: Landing Page (Mini Proyecto)</title>
+    <!-- Tailwind CSS Local -->
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- 
+        RETO FINAL: LANDING PAGE
+        Usa todo lo aprendido para maquetar una landing page sencilla.
+        
+        Secciones requeridas:
+        1. Navbar (Logo + Enlaces + Botón CTA). Sticky o fija.
+        2. Hero Section (Fondo de color/gradiente, Título grande, Subtítulo, Botones de acción, Imagen a la derecha o fondo).
+        3. Features (Grid de 3 columnas con iconos y descripciones).
+        4. Testimonios (Fondo diferente, Cards centradas).
+        5. Footer (Enlaces, Copyright, Redes sociales).
+        
+        Requisitos:
+        - Totalmente Responsive (Móvil -> Desktop).
+        - Uso de Hover y Focus states.
+        - Buena tipografía y espaciado.
+    -->
+
+    <!-- Navbar -->
+    <header class="w-full border-b bg-white/90 backdrop-blur fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="font-bold text-2xl tracking-tighter text-blue-600">
+                    SaaS<span class="text-gray-900">Landing</span>
+                </div>
+
+                <!-- Nav Links (Hidden on mobile) -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Producto</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Características</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Precios</a>
+                </nav>
+
+                <!-- CTA -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden md:block text-sm font-medium text-gray-500 hover:text-gray-900">Login</a>
+                    <a href="#"
+                        class="px-4 py-2 bg-black text-white text-sm font-medium rounded hover:bg-gray-800 transition">
+                        Empezar Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+
+            <div class="md:w-1/2 md:pr-12 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-gray-900">
+                    Construye tu web <br class="hidden md:block" /> <span class="text-blue-600">más rápido.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Nuestra plataforma te ayuda a diseñar, construir y lanzar tus proyectos en tiempo récord con las
+                    mejores herramientas del mercado.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#"
+                        class="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
+                        Probar Demo
+                    </a>
+                    <a href="#"
+                        class="px-8 py-3 bg-white text-gray-700 font-bold rounded-lg shadow border border-gray-200 hover:bg-gray-50 transition">
+                        Saber más
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2">
+                <div
+                    class="relative bg-white p-2 rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Dashboard" class="rounded-lg w-full">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Todo lo que necesitas</h2>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">Estas son algunas de las características que hacen que
+                    nuestra plataforma sea única.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-xl border hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ultra Rápido</h3>
+                    <p class="text-gray-500">Optimizado para velocidad y rendimiento en cualquier dispositivo.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-xl border hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Seguro</h3>
+                    <p class="text-gray-500">Tus datos están protegidos con la mejor encriptación del mercado.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-xl border hover:shadow-lg transition">
+                    <div
+                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Diseño Flexible</h3>
+                    <p class="text-gray-500">Se adapta a cualquier necesidad de negocio que tengas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-10 border-t">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">© 2026 SaaS Landing Inc. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
