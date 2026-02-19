@@ -1,0 +1,75 @@
+/* 
+  Ejercicio 23: SASS Introducción
+*/
+
+// 1. Define Variables ($color-principal, $fuente...)
+$color-principal: #3498db;
+$color-secundario: #e74c3c;
+$color-texto: #333;
+$fuente-principal: 'Arial', sans-serif;
+$fuente-titulo: 'Georgia', serif;
+$espaciado-base: 20px;
+$radio-borde: 5px;
+
+// 2. Usa Nesting para dar estilo a la .container, h1, p y .btn
+// .container {
+//    ...
+//    h1 { ... }
+// }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $espaciado-base;
+    font-family: $fuente-principal;
+    color: $color-texto;
+    background-color: #f9f9f9;
+    border-radius: $radio-borde;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    h1 {
+        font-family: $fuente-titulo;
+        color: $color-principal;
+        font-size: 2.5em;
+        margin-bottom: $espaciado-base / 2;
+        text-align: center;
+    }
+  &::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: $color-secundario;
+            margin: 10px auto;
+        }
+    }        
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: $espaciado-base;
+        text-align: center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: $color-principal;
+        color: white;
+        text-decoration: none;
+        border-radius: $radio-borde;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        
+        
+        &:hover {
+            background-color: $color-secundario;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+         &:active {
+            transform: scale(0.98);
+        }
+       
+    }

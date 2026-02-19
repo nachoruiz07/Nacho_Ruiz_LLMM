@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* 
+  Ejercicio 23: SASS Introducción
+*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container h1 {
+  font-family: "Georgia", serif;
+  color: #3498db;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.container::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #e74c3c;
+  margin: 10px auto;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: scale(0.98);
+}/*# sourceMappingURL=styles.css.map */

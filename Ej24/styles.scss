@@ -1,0 +1,64 @@
+/* Ejercicio 24: Mixins */
+
+// 1. Define un @mixin para botones
+$green: #28a745;
+$red: #dc3545;
+$yellow: #ffc107;
+$blue: #007bff;
+
+
+@mixin btn-structure {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+@mixin btn-theme($color) {
+    background-color: $color;
+    color: white;
+    
+    // Efecto hover con darken
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+    
+    // Efecto active (cuando se hace clic)
+    &:active {
+        transform: scale(0.98);
+    }
+}
+// 2. Define un @mixin para centrar elementos (flexbox)
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 3. Aplica los mixins a las clases .btn-success, .btn-danger, .box
+.btn-success {
+    @include btn-structure;
+    @include btn-theme($green); // (me da un fallo en esta parte al compilar, no se que es lo que esta mal, no lo entiendo muy bien) Lo he solucionado con el uso de IA
+}
+
+.btn-danger {
+    @include btn-structure;
+    @include btn-theme($red);
+}
+
+.box {
+    @include center-flex;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
