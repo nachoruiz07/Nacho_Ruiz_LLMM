@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 29: Tabs Component (SASS + JS)</title>
+    <link rel="stylesheet" href="style.css"> <!-- Generar con compilador SASS -->
+</head>
+
+<body>
+
+    <div class="tabs-container">
+        <div class="tabs-header">
+            <button class="tab-btn active" data-target="tab1">Inicio</button>
+            <button class="tab-btn" data-target="tab2">Perfil</button>
+            <button class="tab-btn" data-target="tab3">Ajustes</button>
+        </div>
+        <div class="tabs-content">
+            <div class="tab-pane active" id="tab1">
+                <h2>Inicio</h2>
+                <p>Bienvenido al panel de inicio.</p>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <h2>Perfil</h2>
+                <p>Aquí puedes editar tu información de usuario.</p>
+            </div>
+            <div class="tab-pane" id="tab3">
+                <h2>Ajustes</h2>
+                <p>Configuración general de la aplicación.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+// Estilos de la Landing
+// Usa variables y nesting
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$dark-color: #333;
+$light-color: #f4f4f4;
+$transition: all 0.3s ease;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $dark-color;
+    color: white;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                transition: $transition;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+     
+        &.active {
+            display: flex;
+        }
+    }
+
+    
+    .burger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: $transition;
+        }
+
+    
+        &.toggle {
+            .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .line2 {
+                opacity: 0;
+            }
+            .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+    }
+
+  
+    @media screen and (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: $dark-color;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+
+            li {
+                margin: 1rem 0;
+            }
+        }
+
+        .burger {
+            display: flex;
+        }
+    }
+}
+
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: white;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: $dark-color;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: $dark-color;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// Define estilos para las tabs aquí
+.tabs-container {
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabs-header {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 2px solid #007bff;
+
+    .tab-btn {
+        padding: 12px 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+
+       
+        &:hover {
+            background-color: #e0e0e0;
+        }
+
+        
+        &.active {
+            background-color: #007bff;
+            color: white;
+        }
+    }
+}
+
+.tabs-content {
+    padding: 20px;
+
+    .tab-pane {
+        display: none;  
+
+        
+        &.active {
+            display: block;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+    }
+}
+// Usa Nesting y estados (&.active)

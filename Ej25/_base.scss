@@ -1,1 +1,25 @@
 // Define estilos base aquí
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $background-color;
+    margin: 0;
+    padding: $spacing-unit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+    margin-bottom: $spacing-unit / 2;
+}
+
+p {
+    margin-bottom: $spacing-unit;
+}

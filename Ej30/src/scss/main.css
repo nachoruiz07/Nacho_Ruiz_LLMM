@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3498db;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+.navbar .nav-links li {
+  margin: 0 1rem;
+}
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.navbar .nav-links li a:hover {
+  color: #3498db;
+}
+.navbar .nav-links.active {
+  display: flex;
+}
+.navbar .burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navbar .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+.navbar .burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.navbar .burger.toggle .line2 {
+  opacity: 0;
+}
+.navbar .burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .navbar .nav-links li {
+    margin: 1rem 0;
+  }
+  .navbar .burger {
+    display: flex;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .cta-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero .cta-btn:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  color: white;
+}/*# sourceMappingURL=main.css.map */

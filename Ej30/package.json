@@ -1,0 +1,13 @@
+{
+    "name": "ejercicico-30-landing",
+    "version": "1.0.0",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.70.0"
+    }
+}
