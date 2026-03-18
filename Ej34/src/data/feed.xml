@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="feed.xsd">
+    
+    <item category="tecnologia">
+        <title>Nuevo móvil revolucionario</title>
+        <description>La nueva generación de teléfonos llega con inteligencia artificial integrada.</description>
+        <pubDate>2025-03-18</pubDate>
+        <author>Carlos Rodríguez</author>
+    </item>
+    
+    <item category="deportes">
+        <title>Mundial de fútbol 2026</title>
+        <description>Las sedes ya están preparadas para el evento más importante.</description>
+        <pubDate>2025-03-17</pubDate>
+        <author>María López</author>
+    </item>
+    
+    <item category="ciencia">
+        <title>Descubrimiento en Marte</title>
+        <description>El rover Perseverance encuentra evidencias de agua en el planeta rojo.</description>
+        <pubDate>2025-03-16</pubDate>
+        <author>Ana García</author>
+    </item>
+    
+    <item category="tecnologia">
+        <title>Actualización de Windows 12</title>
+        <description>Microsoft anuncia nuevas funciones de seguridad y rendimiento.</description>
+        <pubDate>2025-03-15</pubDate>
+        <author>Juan Pérez</author>
+    </item>
+    
+    <item category="economia">
+        <title>Bitcoin alcanza nuevo máximo</title>
+        <description>La criptomoneda supera los 80.000 dólares por primera vez.</description>
+        <pubDate>2025-03-14</pubDate>
+        <author>Laura Sánchez</author>
+    </item>
+</feed>

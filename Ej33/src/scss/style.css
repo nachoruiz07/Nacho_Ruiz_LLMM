@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #3498db;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+}
+input.valido {
+  border-color: #2ecc71;
+}
+input.error {
+  border-color: #e74c3c;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:disabled {
+  background: #ccc;
+}/*# sourceMappingURL=style.css.map */

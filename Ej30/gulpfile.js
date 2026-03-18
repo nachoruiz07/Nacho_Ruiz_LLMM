@@ -30,7 +30,7 @@ function watchFiles() {
     watch('src/scss/**/*.scss', compilarSass);  
     watch('src/js/*.js', copiarJs);              
     watch('src/*.html', copiarHtml);             
-    console.log('👀 Modo watch activado - Editando archivos en src/');
+    console.log(' Modo watch activado - Editando archivos en src/');
 }
 
 

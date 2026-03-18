@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* Escribe tu SASS aquí */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+body h1 {
+  color: #333;
+  text-align: center;
+}
+body p {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}

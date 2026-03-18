@@ -9,6 +9,7 @@ function compilarCSS() {
         .pipe(dest('dist/css'));             // Destino del CSS compilado
 }
 // 3. Exporta la tarea default con watch
+exports.css = compilarCSS;
 exports.default = function() {
     watch('src/scss/**/*.scss', compilarCSS);
 };

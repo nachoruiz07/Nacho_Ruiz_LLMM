@@ -1,0 +1,113 @@
+
+$color-primario: #3498db;
+$color-oscuro: #2c3e50;
+$color-claro: #ecf0f1;
+$ancho-sidebar: 250px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: $ancho-sidebar 1fr;
+    min-height: 100vh;
+
+    
+    &.colapsado {
+        grid-template-columns: 70px 1fr;
+        
+        .sidebar {
+            h2, span { display: none; }
+            ul li a { justify-content: center; }
+        }
+    }
+}
+
+.sidebar {
+    background: $color-oscuro;
+    color: white;
+    padding: 20px;
+    
+    h2 {
+        color: $color-primario;
+        margin-bottom: 30px;
+    }
+    
+    ul {
+        list-style: none;
+        
+        li {
+            margin-bottom: 10px;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+                
+                &:hover {
+                    background: $color-primario;
+                }
+            }
+        }
+    }
+}
+
+
+.contenido {
+    background: $color-claro;
+}
+
+
+.header {
+    background: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    button {
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        
+        &:hover {
+            background: $color-claro;
+        }
+    }
+}
+
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.tarjeta {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    
+    &:hover {
+        transform: scale(1.02);
+        background: $color-primario;
+        color: white;
+    }
+}

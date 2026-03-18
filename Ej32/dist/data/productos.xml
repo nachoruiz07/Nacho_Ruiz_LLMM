@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="productos.xsd"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="productos.xsd">
+    
+    <producto id="P001">
+        <nombre>Portátil Ultra</nombre>
+        <precio moneda="EUR">899.99</precio>
+        <descripcion>Portátil de 15 pulgadas con 16GB RAM y 512GB SSD</descripcion>
+        <categoria>Informática</categoria>
+    </producto>
+    
+    <producto id="P002">
+        <nombre>Ratón Inalámbrico</nombre>
+        <precio moneda="EUR">29.95</precio>
+        <descripcion>Ratón ergonómico con conexión Bluetooth</descripcion>
+        <categoria>Periféricos</categoria>
+    </producto>
+    
+    <producto id="P003">
+        <nombre>Monitor 4K</nombre>
+        <precio moneda="EUR">349.50</precio>
+        <descripcion>Monitor 27 pulgadas, resolución 4K, HDR</descripcion>
+        <categoria>Informática</categoria>
+    </producto>
+    
+    <producto id="P004">
+        <nombre>Teclado Mecánico</nombre>
+        <precio moneda="EUR">89.99</precio>
+        <descripcion>Teclado mecánico RGB con switches azules</descripcion>
+        <categoria>Periféricos</categoria>
+    </producto>
+    
+    <producto id="P005">
+        <nombre>Auriculares Gaming</nombre>
+        <precio moneda="EUR">59.90</precio>
+        <descripcion>Auriculares con micrófono y sonido 7.1</descripcion>
+        <categoria>Audio</categoria>
+    </producto>
+</productos>

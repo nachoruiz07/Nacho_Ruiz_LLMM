@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lector de Noticias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Noticias del día</h1>
+    
+    <div class="filtros">
+        <h2>Filtrar por categoría:</h2>
+        <button class="filtro activo" data-categoria="todas">Todas</button>
+        <button class="filtro" data-categoria="tecnologia">Tecnología</button>
+        <button class="filtro" data-categoria="deportes">Deportes</button>
+        <button class="filtro" data-categoria="ciencia">Ciencia</button>
+        <button class="filtro" data-categoria="economia">Economía</button>
+    </div>
+
+    <div id="noticias" class="noticias-grid">
+        <p>Cargando noticias...</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="schema.xsd">
+    
+    <pelicula id="1">
+        <titulo>El Padrino</titulo>
+        <director>Francis Ford Coppola</director>
+        <año>1972</año>
+        <genero>Drama</genero>
+        <duracion>175</duracion>
+        <puntuacion>9.2</puntuacion>
+    </pelicula>
+    
+    <pelicula id="2">
+        <titulo>Pulp Fiction</titulo>
+        <director>Quentin Tarantino</director>
+        <año>1994</año>
+        <genero>Crimen</genero>
+        <duracion>154</duracion>
+        <puntuacion>8.9</puntuacion>
+    </pelicula>
+    
+    <pelicula id="3">
+        <titulo>El Caballero Oscuro</titulo>
+        <director>Christopher Nolan</director>
+        <año>2008</año>
+        <genero>Acción</genero>
+        <duracion>152</duracion>
+        <puntuacion>9.0</puntuacion>
+    </pelicula>
+    
+    <pelicula id="4">
+        <titulo>Forrest Gump</titulo>
+        <director>Robert Zemeckis</director>
+        <año>1994</año>
+        <genero>Drama</genero>
+        <duracion>142</duracion>
+        <puntuacion>8.8</puntuacion>
+    </pelicula>
+    
+    <pelicula id="5">
+        <titulo>Origen</titulo>
+        <director>Christopher Nolan</director>
+        <año>2010</año>
+        <genero>Ciencia Ficción</genero>
+        <duracion>148</duracion>
+        <puntuacion>8.8</puntuacion>
+    </pelicula>
+    
+    <pelicula id="6">
+        <titulo>Matrix</titulo>
+        <director>Hermanas Wachowski</director>
+        <año>1999</año>
+        <genero>Ciencia Ficción</genero>
+        <duracion>136</duracion>
+        <puntuacion>8.7</puntuacion>
+    </pelicula>
+</peliculas>

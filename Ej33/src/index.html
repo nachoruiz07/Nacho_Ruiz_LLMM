@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    
+    <form id="form">
+        <h2>Usuario</h2>
+        <input type="text" id="usuario" placeholder="Tu usuario">
+        <p id="error-usuario" style="color:red; display:none;">Mínimo 3 caracteres</p>
+
+        <h2>Email</h2>
+        <input type="email" id="email" placeholder="tucorreo@ejemplo.com">
+        <p id="error-email" style="color:red; display:none;">Email inválido</p>
+
+        <h2>Teléfono</h2>
+        <input type="tel" id="telefono" placeholder="123456789">
+        <p id="error-telefono" style="color:red; display:none;">9 dígitos</p>
+
+        <h2>Contraseña</h2>
+        <input type="password" id="password">
+        <p id="error-password" style="color:red; display:none;">8+ chars, 1 mayúscula, 1 número</p>
+
+        <h2>Confirmar contraseña</h2>
+        <input type="password" id="confirm">
+        <p id="error-confirm" style="color:red; display:none;">No coinciden</p>
+
+        <button type="submit" id="boton" disabled>Registrarse</button>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

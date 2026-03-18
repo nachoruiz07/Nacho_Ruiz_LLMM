@@ -1,0 +1,44 @@
+// Colores
+$verde: #2ecc71;
+$rojo: #e74c3c;
+$azul: #3498db;
+
+body {
+    font-family: Arial;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: $azul;
+    text-align: center;
+}
+
+// PARA LAS VALIDACIONES, HE AÑADIDO CLASES PARA LOS INPUTS, PARA QUE SE VEAN LOS ERRORES Y LOS VALIDOS, Y ASÍ PODER HACERLO MÁS VISUAL
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    
+    &.valido {
+        border-color: $verde;
+    }
+    
+    &.error {
+        border-color: $rojo;
+    }
+}
+
+button {
+    background: $azul;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+    &:disabled {
+        background: #ccc;
+    }
+}

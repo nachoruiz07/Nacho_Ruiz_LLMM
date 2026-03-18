@@ -1,0 +1,9 @@
+{
+  "name": "ej35-gestor-peliculas",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "sass": "^1.69.5"
+  }
+}

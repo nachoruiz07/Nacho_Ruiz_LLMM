@@ -1,0 +1,17 @@
+// Importar 
+@import 'base';
+@import 'layout';
+@import 'componentes';
+
+// Responsive
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .peliculas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+// EN ESTE EJERCICIO EN GENERAL HE NECESITADO MAS AYUDA PARA ENCUADRAR Y PONER BIEN COSAS EN EL SCSS Y EL JS, YA QUE ME ESTABAN DANDO MAL BASTANTES MÉTODOS Y ESTILOS
