@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <libro id="L01" categoria="ficcion">
+        <titulo>El Imperio Final</titulo>
+        <autor>Brandon Sanderson</autor>
+        <precio>19.95</precio>
+        <stock>12</stock>
+    </libro>
+    <libro id="L02" categoria="programacion">
+        <titulo>Java para Novatos</titulo>
+        <autor>Juan Perez</autor>
+        <precio>25.50</precio>
+        <stock>5</stock>
+    </libro>
+    <libro id="L03" categoria="programacion">
+        <titulo>SQL Server Avanzado</titulo>
+        <autor>Maria Gomez</autor>
+        <precio>30.00</precio>
+        <stock>0</stock>
+    </libro>
+    <libro id="L04" categoria="historia">
+        <titulo>Breve Historia del Tiempo</titulo>
+        <autor>Stephen Hawking</autor>
+        <precio>15.00</precio>
+        <stock>3</stock>
+    </libro>
+</catalogo>

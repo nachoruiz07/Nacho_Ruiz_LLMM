@@ -1,0 +1,15 @@
+/* EJERCICIO 1: RUTAS BÁSICAS */
+
+-- 1. Rutas absolutas
+-- TODO: Escribe aquí la ruta absoluta para extraer todos los elementos <libro>.
+-- Pista: Empieza desde la raíz jerárquica explícita, por ejemplo: /catalogo/...
+
+
+-- 2. Forma corta descendente (//)
+-- TODO: Selecciona todos los elementos <titulo> sin importar a qué altura jerárquica estén.
+-- Pista: Usa las dobles barras diagonales antes del nombre de la etiqueta para ignorar la ruta precisa.
+
+
+-- 3. Selección de atributos
+-- TODO: Extrae explícitamente y de forma directa el atributo "categoria" de todos los libros.
+-- Pista: Desciende hacia el libro y luego utiliza la arroba (@) para referirte al nombre de atributo.

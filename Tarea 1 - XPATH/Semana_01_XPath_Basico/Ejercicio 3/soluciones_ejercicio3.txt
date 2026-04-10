@@ -1,0 +1,21 @@
+/* EJERCICIO 3: ESCENARIO REAL - Informe de Auditoría mediante Funciones */
+
+-- El gerente de la librería necesita un informe rápido aprovechando sum() y count().
+
+-- 1. Libros agotados
+-- TODO: Cuenta estadísticamente cuántos libros diferentes tienen ahora mismo un stock de valor 0.
+-- Pista: Usa la función count(ruta_hacia_los_libros_agregando_condicion_stock_0).
+
+count(//libro[stock = 0])
+
+-- 2. Valor del inventario técnico
+-- TODO: Calcula la suma de los valores de PRECIO de aquellos libros cuya categoría sea estrictamente "programacion" (sea el nivel de stock que sea).
+-- Pista: La función sum() solo admite campos numéricos puros, por tanto la ruta interior debe rematar apuntando inequívocamente a los nodos <precio> después de haber filtrado el libro a la categoría exacta.
+
+sum(//libro[@categoria = "programacion"]/precio)
+
+-- 3. Nombre del nodo matriz en el árbol
+-- TODO: Averigua internamente el nombre semántico que recibe la etiqueta raíz base por motivos de volcado de sistemas.
+-- Pista: La función name() te da este String. Pásale como variable el nodo raíz (/*).
+
+name(/*)

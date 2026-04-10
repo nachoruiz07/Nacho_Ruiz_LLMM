@@ -1,0 +1,19 @@
+/* EJERCICIO 2: PREDICADOS SIMPLES */
+
+-- 1. Filtrado exacto por atributo
+-- TODO: Selecciona el nodo libro entero cuyo atributo 'id' sea igual a 'L02'.
+-- Pista: Navega hasta el libro, añade corchetes [] y usa comillas simples para comparar el texto del ID.
+
+/catalogo/libro[@id="L02"]
+
+-- 2. Filtrado por valor numérico
+-- TODO: Selecciona únicamente la etiqueta de los títulos de aquellos libros con precio estrictamente mayor a 20.
+-- Pista: Primero filtra a nivel libro (ej: libro[precio > 20]) y posteriormente desciende un último nivel hasta el título.
+
+/catalogo/libro[precio>20]
+
+-- 3. Múltiples condiciones
+-- TODO: Selecciona los libros que sean de la categoría "programacion" Y que a la vez su stock sea mayor a 0.
+-- Pista: Dentro de los corchetes [] puedes agrupar lógicas usando la palabra reservada 'and'.
+
+/catalogo/libro[@categoria='programacion' and stock>0]
