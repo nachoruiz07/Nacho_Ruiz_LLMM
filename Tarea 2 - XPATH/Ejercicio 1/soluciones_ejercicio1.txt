@@ -1,0 +1,19 @@
+/* EJERCICIO 1: EJES AVANZADOS Y PREDICADOS */
+
+-- 1. Predicados con operadores lógicos
+-- TODO: Extrae todos los elementos <titulo> de libros con precio superior a 20 y menor o igual a 26.
+-- Pista: Agrupa todo dentro de los corchetes [] y evalúa: precio > 20 and precio <= 26.
+
+//libro[precio > 20 and precio <= 26]/titulo
+
+-- 2. Eje inverso (Subiendo en el árbol)
+-- TODO: Extrae el atributo 'nombre' de la <seccion> en la que está guardado el libro con id='L04'.
+-- Pista: Ve directo al libro con //libro[@id='L04'] y continúa con /parent::seccion/@nombre.
+
+//libro[@id='L04']/parent::seccion/@nombre
+
+-- 3. Eje horizontal (Buscando hermanos)
+-- TODO: Encuentra TODOS los hermanos que están situados posteriormente en el XML del libro id='L01'.
+-- Pista: Ve hasta el libro L01 y traza a continuación el eje /following-sibling::libro.
+
+//libro[@id='L01']/following-sibling::libro

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <seccion nombre="Ficcion">
+        <libro id="L01" idioma="es">
+            <titulo>El Imperio Final</titulo>
+            <autor>Brandon Sanderson</autor>
+            <precio>19.95</precio>
+            <ventas>1500</ventas>
+        </libro>
+        <libro id="L04" idioma="en">
+            <titulo>The Way of Kings</titulo>
+            <autor>Brandon Sanderson</autor>
+            <precio>24.50</precio>
+            <ventas>3000</ventas>
+        </libro>
+    </seccion>
+    <seccion nombre="Tecnica">
+        <libro id="L02" idioma="es">
+            <titulo>Java para Novatos</titulo>
+            <autor>Juan Perez</autor>
+            <precio>25.50</precio>
+            <ventas>320</ventas>
+        </libro>
+        <libro id="L03" idioma="es">
+            <titulo>SQL Server Avanzado</titulo>
+            <autor>Maria Gomez</autor>
+            <precio>30.00</precio>
+            <ventas>150</ventas>
+        </libro>
+    </seccion>
+</biblioteca>
