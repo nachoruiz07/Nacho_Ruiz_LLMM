@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro id="1">
+        <titulo>El Imperio Final</titulo>
+        <autor>Brandon Sanderson</autor>
+        <categoria>Fantasia</categoria>
+        <precio>22.50</precio>
+        <publicacion>2006</publicacion>
+        <stock>12</stock>
+    </libro>
+    <libro id="2">
+        <titulo>Java para Novatos</titulo>
+        <autor>Juan Perez</autor>
+        <categoria>Programacion</categoria>
+        <precio>15.00</precio>
+        <publicacion>2021</publicacion>
+        <stock>0</stock>
+    </libro>
+    <libro id="3">
+        <titulo>SQL Avanzado</titulo>
+        <autor>Maria Gomez</autor>
+        <categoria>Bases de Datos</categoria>
+        <precio>30.00</precio>
+        <publicacion>2019</publicacion>
+        <stock>3</stock>
+    </libro>
+    <libro id="4">
+        <titulo>El Pozo de la Ascensión</titulo>
+        <autor>Brandon Sanderson</autor>
+        <categoria>Fantasia</categoria>
+        <precio>22.50</precio>
+        <publicacion>2007</publicacion>
+        <stock>5</stock>
+    </libro>
+    <libro id="5">
+        <titulo>Python para Todos</titulo>
+        <autor>Juan Perez</autor>
+        <categoria>Programacion</categoria>
+        <precio>18.00</precio>
+        <publicacion>2020</publicacion>
+        <stock>10</stock>
+    </libro>
+</biblioteca>
+
