@@ -8,6 +8,6 @@
     (: TODO Paso 2: Genera un elemento li para la lista HTML :)
     (: Ejemplo esperado: <li>El Imperio Final - Brandon Sanderson</li> :)
     return 
-        <li>{$libro/titulo} - {$libro/autor}</li>
+        <li>{$libro/titulo/text()} - {$libro/autor/text()}</li>
 }
 </ul>
