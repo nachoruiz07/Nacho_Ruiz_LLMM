@@ -1,0 +1,21 @@
+{
+  "libros": [
+    {
+      "id": 3,
+      "titulo": "funciona", 
+      "autor": "Nacho Ruiz"
+    }
+    {
+      "id": 4,
+      "titulo": "hola", 
+      "autor": "Amin"
+    }
+    {
+      "id": 5,
+      "titulo": "NACHO", 
+      "autor": "CR7"
+    }
+  ],
+  "TODO_2_array": "Borra esto y asígnale a libros el valor de un Array vacío [ ], este corchete te permitirá agrupar cosas repetidas.",
+  "TODO_3_elementos": "Dentro del Array [ ], simplemente escribe uno, dos o tres objetos completos {} separados siempre por coma, representando libros como hicimos en el archivo de libro.json."
+}

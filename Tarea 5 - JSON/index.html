@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador Comercial (JSON Web)</title>
+    <style>body { font-family: Arial; padding: 20px; } li { background: #f4f4f4; margin: 5px 0; padding: 10px; border-radius: 5px; list-style: none;}</style>
+</head>
+<body>
+    <h1>Catálogo de Libros en Vivo (Frontend Invertido)</h1>
+    <!-- El DOM vacío de la página esperando a que JS inyecte el HTML dinámicamente -->
+    <ul id="lista-libros"></ul>
+
+    <script>
+        // Puente empaquetado y hardcodeado equivalente a hacer fetch de catalogo.json 
+        const catalogo = {
+            "libros": [
+                { "id": 1, "titulo": "El Imperio Final" },
+                { "id": 2, "titulo": "Java para Novatos" },
+                { "id": 3, "titulo": "C++ Avanzado" }
+            ]
+        };
+
+        // TODO EJERCICIO 3: ESCENARIO REAL - GENERADOR E INYECTOR HTML FRONTEND
+        
+        // Paso 1: Selecciona en JS puro la etiqueta de lista usando su ID 
+        // TIP: const listaUl = document.getElementById("lista-libros");
+        const listaUl = document.getElementById("lista-libros");
+        for(let i=0; i < catalogo.libros.length; i++) {
+            const libro = catalogo.libros[i];
+            catalogo.libros.forEach(libro => {
+            listaUl.innerHTML += '<li>' + libro.titulo + '</li>';
+            });
+        }
+
+        // Paso 2 y 3: Recorre cíclicamente toda la matriz array de "libros" usando un bucle.
+        // TIP Bucle FOR: for(let i=0; i < catalogo.libros.length; i++) { const libro = catalogo.libros[i]; ... }
+        // TIP ForEach: catalogo.libros.forEach(libro => { ... });
+        
+
+        // Paso 4: Inyecta dentro del DOM virtual cada componente HTML. (Pon esto estrictamente DENTRO de tu bucle)
+        // TIP: listaUl.innerHTML += '<li>' + libro.titulo + '</li>';
+        
+    </script>
+</body>
+</html>

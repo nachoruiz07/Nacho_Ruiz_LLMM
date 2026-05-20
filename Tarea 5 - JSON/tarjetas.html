@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Alumno: [TU NOMBRE COMPLETO] | Expediente: [XXXXX] -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo con Tarjetas (JSON Anidado)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+        h1 { color: #333; }
+
+        #contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* TODO PASO 3: Dale estilo a las tarjetas.
+           Deben tener al menos: borde, sombra (box-shadow) y relleno (padding).
+           Añade aquí tus propias reglas CSS para la clase .tarjeta */
+        .tarjeta {
+            /* TODO: background, border, border-radius, box-shadow, padding, width ... */
+            background: steelblue;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 16px;
+            width: 200px;
+        }
+
+        /* TODO PASO 3: Crea una clase .no-disponible para marcar en rojo
+           los libros que tengan disponible: false */
+        .no-disponible {
+            /* TODO: color: red; font-weight: bold; ... */
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fichas de Libros (JSON Anidado)</h1>
+
+    <!-- El DOM vacío esperando que JS inyecte las tarjetas dinámicamente -->
+    <div id="contenedor"></div>
+
+    <script>
+        // Puente hardcodeado: el JSON de tarjetas.json cargado como constante JS.
+        // (En producción se haría con fetch(), pero aquí lo embebemos directamente.)
+        const catalogo = /* TODO PASO 1: Pega aquí el contenido de tu tarjetas.json
+                            completo, una vez que lo hayas rellenado correctamente.
+                            Ejemplo de estructura esperada:
+                            {
+                              "libros": [
+                                { "id": 1, "titulo": "...", "detalles": { "autor": "...", "anio": 2001, "disponible": true } },
+                                ...
+                              ]
+                            }
+                         */ 
+                         // <- Borra el null cuando pegues tu JSON
+                         {
+  "libros": [
+    {
+      "Kagurabachi": "Primer libro",
+      "id": 1,
+      "titulo": "Kagurabachi",
+      "detalles": {
+        "autor": "Takeru Hokazono",
+        "anio": "2019",
+        "disponible": true
+      }
+    },
+    {
+      "Jojos Bizarra Adventure": "Segundo libro.",
+      "id": 2,
+      "titulo": "Jojos Bizarra Adventure",
+      "detalles": {
+        "autor": "Hirohiko Araki",
+        "anio": "2020",
+        "disponible": false
+      }
+    },
+    {
+      "Tokyo Ghoul": "Tercer libro.",
+      "id": 3,
+      "titulo": "Tokyo Ghoul",
+      "detalles": {
+        "autor": "Sui Ishida",
+        "anio": "2011",
+        "disponible": true
+      }
+    }
+  ]
+}
+
+
+        // TODO PASO 2: Selecciona el div con id="contenedor"
+        // TIP: const contenedor = document.getElementById('contenedor');
+        const contenedor = document.getElementById('contenedor');
+
+
+        // TODO PASO 2: Recorre el array catalogo.libros con forEach
+        // TIP: catalogo.libros.forEach(libro => { ... });
+catalogo.libros.forEach(libro => {
+    // Paso 2: Accede a las propiedades anidadas:
+    const titulo = libro.titulo;
+    const autor = libro.detalles.autor;
+    const anio = libro.detalles.anio;
+    const disponible = libro.detalles.disponible;   
+        // Paso 2: Crea una tarjeta HTML para cada libro
+    const tarjetaHTML = `
+        <div class="tarjeta ${disponible ? '' : 'no-disponible'}">
+            <h2>${titulo}</h2>
+            <p><strong>Autor:</strong> ${autor}</p>
+            <p><strong>Año:</strong> ${anio}</p>        
+            <p><strong>Disponibilidad:</strong> ${disponible ? 'Disponible' : 'No Disponible'}</p>
+        </div>
+    `;
+
+            // TODO PASO 2: Accede a las propiedades anidadas:
+            //   libro.titulo
+            //   libro.detalles.autor
+            //   libro.detalles.anio
+            //   libro.detalles.disponible  <- booleano true/false
+
+
+
+
+
+            // TODO PASO 2: Inyecta la tarjeta en contenedor.innerHTML
+            // Debe incluir: título, autor, año y estado de disponibilidad.
+    contenedor.innerHTML += tarjetaHTML;
+});
+
+    </script>
+</body>
+</html>

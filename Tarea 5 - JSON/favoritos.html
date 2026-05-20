@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Alumno: [TU NOMBRE COMPLETO] | Expediente: [XXXXX] -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Libros Favoritos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            background: #f0f2f5;
+            max-width: 480px;
+        }
+        h1 { color: #333; margin-bottom: 16px; }
+
+        #zona-entrada {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        #nuevo-libro {
+            flex: 1;
+            padding: 10px;
+            font-size: 15px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            padding: 10px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #btn-guardar  { background: #4CAF50; color: white; }
+        #btn-borrar   { background: #e53935; color: white; margin-top: 12px; }
+
+        ul { list-style: none; padding: 0; }
+        li {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px 14px;
+            margin: 6px 0;
+        }
+        #mensaje-vacio { color: #888; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>📚 Mis Libros Favoritos</h1>
+
+    <div id="zona-entrada">
+        <input
+            type="text"
+            id="nuevo-libro"
+            placeholder="Escribe el título de un libro..."
+        >
+        <!-- TODO PASO 1: Conecta este botón a la función guardar() con el atributo onclick -->
+        <button id="btn-guardar" onclick="guardar()">Añadir a favoritos</button>
+    </div>
+
+    <!-- Lista donde aparecerán los favoritos guardados -->
+    <ul id="favoritos"></ul>
+
+    <p id="mensaje-vacio">Aún no tienes favoritos guardados.</p>
+
+    <!-- TODO PASO 3: Añade un botón "Borrar todos" que llame a borrarTodos() -->
+    <!-- TIP: <button id="btn-borrar" onclick="borrarTodos()">Borrar todos</button> -->
+     <button id="btn-borrar" onclick="borrarTodos()">Borrar todos</button>
+
+
+    <script>
+
+
+
+        // ── Referencias al DOM ──────────────────────────────────────────
+        const lista        = document.getElementById('favoritos');
+        const inputLibro   = document.getElementById('nuevo-libro');
+        const msgVacio     = document.getElementById('mensaje-vacio');
+
+
+        // ── PASO 2: Función guardar() ────────────────────────────────────
+        // Esta función se ejecuta cuando el usuario pulsa "Añadir a favoritos".
+        function guardar() {
+            // Paso 2a: Lee el valor del input y recorta espacios en blanco.
+            // TIP: const titulo = inputLibro.value.trim();
+            const titulo = inputLibro.value.trim();
+            // Paso 2b: Si el campo está vacío, no hagas nada (usa un if y return).
+            if (!titulo) return;
+            let favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
+            favoritos.push(titulo);
+            localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            inputLibro.value = '';
+            renderizar();
+        
+            // Paso 2c: Recupera el array actual desde localStorage.
+            // TIP: let favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
+
+            // Paso 2d: Añade el nuevo título al array.
+            // TIP: favoritos.push(titulo);
+
+            // Paso 2e: Guarda el array actualizado de vuelta en localStorage.
+            // TIP: localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+            // Paso 2f: Limpia el input y redibuja la lista.
+            // TIP: inputLibro.value = '';
+            //      renderizar();
+        }
+
+
+        // ── PASO 3: Función borrarTodos() ────────────────────────────────
+        function borrarTodos() {
+            // TODO: Elimina la clave 'favoritos' de localStorage.
+            // TIP: localStorage.removeItem('favoritos');
+            localStorage.removeItem('favoritos');
+            renderizar();
+            // TODO: Redibuja la lista (quedará vacía).
+            // TIP: renderizar();
+        }
+
+
+        // ── Función renderizar() (ya implementada como guía) ─────────────
+        // Lee el array del localStorage y lo pinta en la <ul>.
+        function renderizar() {
+            // TODO: Recupera el array de localStorage igual que en guardar().
+            // let favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
+            let favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
+            lista.innerHTML = favoritos.map(t => `<li>${t}</li>`).join('');
+            msgVacio.style.display = favoritos.length === 0 ? 'block' : 'none';
+            // TODO: Genera un <li> por cada título del array e inyéctalo en lista.innerHTML.
+            // TIP: lista.innerHTML = favoritos.map(t => `<li>${t}</li>`).join('');
+
+            // TODO: Muestra u oculta el mensaje de "sin favoritos" según si el array está vacío.
+            // TIP: msgVacio.style.display = favoritos.length === 0 ? 'block' : 'none';
+        }
+
+
+        // ── PASO 3: Cargar favoritos al iniciar la página ─────────────────
+        // window.onload se ejecuta cuando el HTML está completamente cargado.
+        window.onload = function () {
+            // TODO: Llama a renderizar() para mostrar los favoritos guardados.
+            renderizar();
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Buscador de Libros -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Libros en Tiempo Real</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        #buscador {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        ul { list-style: none; padding: 0; }
+        li {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Libros (Filtrado Dinámico con JSON)</h1>
+
+    <!-- TODO PASO 1: Este input ya está listo. Conéctalo al evento oninput más abajo. -->
+    <input
+        type="text"
+        id="buscador"
+        placeholder="Busca un libro..."
+        oninput="filtrar()"
+    >
+
+    <!-- Lista donde se mostrarán los resultados filtrados -->
+    <ul id="lista-resultados"></ul>
+
+    <script>
+        // TODO PASO 1: Crea aquí tu array de al menos 5 libros (título + autor).
+        // Deben ser libros REALES que tú conozcas, no inventados ni genéricos.
+        // Ejemplo de estructura:
+        // const libros = [
+        //     { "titulo": "...", "autor": "..." },
+        //     ...
+        // ];
+        const libros = [
+            /* TODO: añade aquí tus 5 libros reales */
+     {id: 1, titulo: "El Imperio Final", autor: "Brandon Sanderson"},
+     {id: 2, titulo: "Java para Novatos", autor: "John Doe"},
+     {id: 3, titulo: "C++ Avanzado", autor: "Jane Smith"},
+     {id: 4, titulo: "El Hobbit", autor: "  J.R.R. Tolkien"},
+     {id: 5, titulo: "1984", autor: "George Orwell"}
+
+
+        ];
+
+
+        // Referencia a la lista del DOM (ya está seleccionada para ti)
+        const lista = document.getElementById('lista-resultados');
+
+
+        // TODO PASO 2: Completa la función filtrar()
+        function filtrar() {
+            // Paso 2a: Lee el valor del input y conviértelo a minúsculas
+            // TIP: const texto = document.getElementById('buscador').value.toLowerCase();
+const texto = document.getElementById('buscador').value.toLowerCase();
+const resultado = libros.filter(libro => libro.titulo.toLowerCase().includes(texto));
+lista.innerHTML = resultado.map(l => `<li>${l.titulo} — ${l.autor}</li>`).join('');
+
+            // Paso 2b: Filtra el array con .filter()
+            // TIP: const resultado = libros.filter(libro => libro.titulo.toLowerCase().includes(texto));
+
+
+            // Paso 2c: Actualiza lista.innerHTML con los libros filtrados
+            // Genera un <li> por cada libro del resultado con su título y autor.
+            // TIP: lista.innerHTML = resultado.map(l => `<li>${l.titulo} — ${l.autor}</li>`).join('');
+
+        }
+
+
+        // TODO PASO 3: Llama a filtrar() al cargar la página para mostrar todos los libros inicialmente.
+        // TIP: filtrar();
+        filtrar();
+
+    </script>
+</body>
+</html>
